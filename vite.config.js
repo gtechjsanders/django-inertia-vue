@@ -1,14 +1,12 @@
-import {resolve} from 'path';
-import vue from '@vitejs/plugin-vue'
+import { resolve } from "path";
+import vue from "@vitejs/plugin-vue";
 
 module.exports = {
-  plugins: [
-    vue()
-  ],
-  root: resolve('./assets'),
-  base: '/static/',
+  plugins: [vue()],
+  root: resolve("./assets"),
+  base: "/static/",
   server: {
-    host: 'localhost',
+    host: "localhost",
     port: 3000,
     open: false,
     watch: {
@@ -17,17 +15,17 @@ module.exports = {
     },
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: [".js", ".vue"],
   },
   build: {
-    outDir: resolve('./assets/dist'),
-    assetsDir: '',
+    outDir: resolve("./assets/dist"),
+    assetsDir: "",
     manifest: true,
     emptyOutDir: true,
-    target: 'es2015',
+    target: "es2015",
     rollupOptions: {
       input: {
-        main: resolve('./assets/js/main.js'),
+        main: resolve("./assets/js/main.js"),
       },
       output: {
         chunkFileNames: undefined,
